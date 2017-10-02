@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XTp-0S-MtC">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lista de Compras-->
+        <scene sceneID="etr-of-XIN">
+            <objects>
+                <tableViewController id="flg-q1-Hu1" customClass="ShopTableViewController" customModule="EduardoWashington" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4ZZ-ft-zoe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="E3n-oQ-lb3" customClass="ShopTableViewCell" customModule="EduardoWashington" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E3n-oQ-lb3" id="f87-MJ-7EX">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="flg-q1-Hu1" id="jYf-lI-e0e"/>
+                            <outlet property="delegate" destination="flg-q1-Hu1" id="cXV-fC-aGK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Lista de Compras" id="ym7-6j-GGr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZT4-lh-3eh"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AxA-of-Sa9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="558" y="-250"/>
+        </scene>
+        <!--Ajustes-->
+        <scene sceneID="3ZU-MS-Apq">
+            <objects>
+                <viewController id="0Iq-nk-sPW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xnz-Jz-YTw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="3HC-6m-7fo"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ajustes" id="cNA-tJ-wm7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jtU-Wd-ogx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1817" y="553"/>
+        </scene>
+        <!--Total da Compra-->
+        <scene sceneID="aHb-bI-Xjg">
+            <objects>
+                <viewController id="Mfw-sn-PTx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zBQ-pp-zzl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="KgL-eR-deX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Total da Compra" id="Jq2-69-AF6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tL9-g7-qBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-831" y="553"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cYP-eT-Fp2">
+            <objects>
+                <tabBarController id="XTp-0S-MtC" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="scK-Xk-zuU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Orw-qE-hJE" kind="relationship" relationship="viewControllers" id="E5N-Zs-dZD"/>
+                        <segue destination="0Iq-nk-sPW" kind="relationship" relationship="viewControllers" id="D4V-W3-EBG"/>
+                        <segue destination="Mfw-sn-PTx" kind="relationship" relationship="viewControllers" id="qxl-tk-etA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ro6-AU-zSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1374" y="-249"/>
+        </scene>
+        <!--Compras-->
+        <scene sceneID="mNX-mV-sg4">
+            <objects>
+                <navigationController id="Orw-qE-hJE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Compras" id="LoT-Sn-WOK"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nrd-TX-ajj">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="flg-q1-Hu1" kind="relationship" relationship="rootViewController" id="Jjd-rn-2pt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7qV-3j-t8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-415" y="-250"/>
+        </scene>
+    </scenes>
+</document>
