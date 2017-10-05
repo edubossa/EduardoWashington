@@ -13,6 +13,9 @@
 		BA3D11011F8042B900B98A60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3D10FF1F8042B900B98A60 /* LaunchScreen.storyboard */; };
 		BA3D110D1F80565000B98A60 /* ShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D110C1F80565000B98A60 /* ShopTableViewController.swift */; };
 		BA3D110F1F80575700B98A60 /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D110E1F80575700B98A60 /* ShopTableViewCell.swift */; };
+		BAA648231F82DE5300D1753F /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA648221F82DE5300D1753F /* ProductViewController.swift */; };
+		BAA648261F843BBB00D1753F /* EduardoWashington.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAA648241F843BBB00D1753F /* EduardoWashington.xcdatamodeld */; };
+		BAE159DC1F8656CC00834517 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE159DB1F8656CC00834517 /* UIViewController+CoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		BA3D11021F8042B900B98A60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA3D110C1F80565000B98A60 /* ShopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTableViewController.swift; sourceTree = "<group>"; };
 		BA3D110E1F80575700B98A60 /* ShopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTableViewCell.swift; sourceTree = "<group>"; };
+		BAA648221F82DE5300D1753F /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		BAA648251F843BBB00D1753F /* EduardoWashington.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EduardoWashington.xcdatamodel; sourceTree = "<group>"; };
+		BAE159DB1F8656CC00834517 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		BA3D10F51F8042B900B98A60 /* EduardoWashington */ = {
 			isa = PBXGroup;
 			children = (
+				BAE159DA1F86569F00834517 /* Extensions */,
 				BA3D110B1F80434E00B98A60 /* model */,
 				BA3D110A1F80432900B98A60 /* controllers */,
 				BA3D10F61F8042B900B98A60 /* AppDelegate.swift */,
@@ -63,6 +70,7 @@
 				BA3D10FD1F8042B900B98A60 /* Assets.xcassets */,
 				BA3D10FF1F8042B900B98A60 /* LaunchScreen.storyboard */,
 				BA3D11021F8042B900B98A60 /* Info.plist */,
+				BAA648241F843BBB00D1753F /* EduardoWashington.xcdatamodeld */,
 			);
 			path = EduardoWashington;
 			sourceTree = "<group>";
@@ -72,6 +80,7 @@
 			children = (
 				BA3D110C1F80565000B98A60 /* ShopTableViewController.swift */,
 				BA3D110E1F80575700B98A60 /* ShopTableViewCell.swift */,
+				BAA648221F82DE5300D1753F /* ProductViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -81,6 +90,14 @@
 			children = (
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		BAE159DA1F86569F00834517 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BAE159DB1F8656CC00834517 /* UIViewController+CoreData.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +174,9 @@
 			files = (
 				BA3D110F1F80575700B98A60 /* ShopTableViewCell.swift in Sources */,
 				BA3D10F71F8042B900B98A60 /* AppDelegate.swift in Sources */,
+				BAA648231F82DE5300D1753F /* ProductViewController.swift in Sources */,
+				BAE159DC1F8656CC00834517 /* UIViewController+CoreData.swift in Sources */,
+				BAA648261F843BBB00D1753F /* EduardoWashington.xcdatamodeld in Sources */,
 				BA3D110D1F80565000B98A60 /* ShopTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,10 +316,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = EduardoWashington/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.fiap.EduardoWashington;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -310,10 +331,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = EduardoWashington/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.fiap.EduardoWashington;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -340,6 +362,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BAA648241F843BBB00D1753F /* EduardoWashington.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BAA648251F843BBB00D1753F /* EduardoWashington.xcdatamodel */,
+			);
+			currentVersion = BAA648251F843BBB00D1753F /* EduardoWashington.xcdatamodel */;
+			path = EduardoWashington.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BA3D10EB1F8042B900B98A60 /* Project object */;
 }

@@ -9,7 +9,12 @@
 import UIKit
 
 class ShopTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var ivImage: UIImageView!
+    @IBOutlet weak var tfProduct: UILabel!
+    @IBOutlet weak var tfState: UILabel!
+    @IBOutlet weak var tfAmount: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
