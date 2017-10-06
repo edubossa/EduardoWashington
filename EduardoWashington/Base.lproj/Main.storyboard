@@ -256,7 +256,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="36" id="DQy-y9-m3e">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsCell" rowHeight="36" id="DQy-y9-m3e" customClass="SettingsTableViewCell" customModule="EduardoWashington" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24" width="290" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DQy-y9-m3e" id="vgO-lF-29t">
@@ -279,6 +279,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tfIOF" destination="SwV-A8-4yf" id="iiO-Rt-eHq"/>
+                                            <outlet property="tfState" destination="MM3-5r-MH8" id="Jed-c4-2H1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

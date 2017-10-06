@@ -18,6 +18,7 @@
 		BAE159DC1F8656CC00834517 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE159DB1F8656CC00834517 /* UIViewController+CoreData.swift */; };
 		BAE159DE1F87218800834517 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE159DD1F87218800834517 /* SettingsViewController.swift */; };
 		BAE159E01F8726D900834517 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE159DF1F8726D900834517 /* BuyViewController.swift */; };
+		BAE159E21F87CA2000834517 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE159E11F87CA2000834517 /* SettingsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		BAE159DB1F8656CC00834517 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
 		BAE159DD1F87218800834517 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BAE159DF1F8726D900834517 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		BAE159E11F87CA2000834517 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				BAA648221F82DE5300D1753F /* ProductViewController.swift */,
 				BAE159DD1F87218800834517 /* SettingsViewController.swift */,
 				BAE159DF1F8726D900834517 /* BuyViewController.swift */,
+				BAE159E11F87CA2000834517 /* SettingsTableViewCell.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				BA3D110F1F80575700B98A60 /* ShopTableViewCell.swift in Sources */,
 				BAE159E01F8726D900834517 /* BuyViewController.swift in Sources */,
+				BAE159E21F87CA2000834517 /* SettingsTableViewCell.swift in Sources */,
 				BA3D10F71F8042B900B98A60 /* AppDelegate.swift in Sources */,
 				BAE159DE1F87218800834517 /* SettingsViewController.swift in Sources */,
 				BAA648231F82DE5300D1753F /* ProductViewController.swift in Sources */,
