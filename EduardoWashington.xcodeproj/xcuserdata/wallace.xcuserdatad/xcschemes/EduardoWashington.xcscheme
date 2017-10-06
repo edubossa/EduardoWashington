@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BA3D10F21F8042B900B98A60"
+               BuildableName = "EduardoWashington.app"
+               BlueprintName = "EduardoWashington"
+               ReferencedContainer = "container:EduardoWashington.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      customWorkingDirectory = "/Users/wallace/Documents/FIAP/DESENVOLVIMENTO DE APLICA&#199;&#213;ES IOS/EduardoWashington/EduardoWashington">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "BA3D10F21F8042B900B98A60"
+            BuildableName = "EduardoWashington.app"
+            BlueprintName = "EduardoWashington"
+            ReferencedContainer = "container:EduardoWashington.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+</Scheme>

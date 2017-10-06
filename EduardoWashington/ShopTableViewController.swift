@@ -21,7 +21,7 @@ class ShopTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         label.text = "Sua lista está vazia!"
         label.textAlignment = .center
-        label.textColor = .white
+        label.textColor = .black
         
         loadProducts()
     }

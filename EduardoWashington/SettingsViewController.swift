@@ -41,7 +41,6 @@ class SettingsViewController: UIViewController {
         }
     }
 
-    
     func showAlert(type: StateType, state: State?) {
         let title = (type == .add) ? "Adicionar" : "Editar"
         let alert = UIAlertController(title: "\(title) Estado", message: nil, preferredStyle: .alert)
@@ -85,35 +84,21 @@ class SettingsViewController: UIViewController {
 extension SettingsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        /*let category = dataSource[indexPath.row]
-        let cell = tableView.cellForRow(at: indexPath)!
-        if cell.accessoryType == .none {
-            cell.accessoryType = .checkmark
-            movie.addToCategories(category)
-        } else {
-            cell.accessoryType = .none
-            movie.removeFromCategories(category)
-        }
-        tableView.deselectRow(at: indexPath, animated: false)*/
+        let state = self.dataSource[indexPath.row]
+        self.showAlert(type: .edit, state: state)
     }
     
-    /*func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let deleteAction = UITableViewRowAction(style: .destructive, title: "Excluir") { (action: UITableViewRowAction, indexPath: IndexPath) in
-            let category = self.dataSource[indexPath.row]
-            self.context.delete(category)
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { (action: UITableViewRowAction, indexPath: IndexPath) in
+            let state = self.dataSource[indexPath.row]
+            self.context.delete(state)
             try! self.context.save()
             self.dataSource.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
-        
-        let editAction = UITableViewRowAction(style: .normal, title: "Editar") { (action: UITableViewRowAction, indexPath: IndexPath) in
-            let category = self.dataSource[indexPath.row]
-            tableView.setEditing(false, animated: true)
-            self.showAlert(type: .edit, category: category)
-        }
-        editAction.backgroundColor = .blue
-        return [editAction, deleteAction]
-    }*/
+        return [deleteAction]
+    }
+    
 }
 
 // MARK: - UITableViewDelegate
