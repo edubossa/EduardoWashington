@@ -13,6 +13,8 @@ class BuyViewController: UIViewController {
     
     @IBOutlet weak var tfTotalUS: UILabel!
     @IBOutlet weak var tfTotalRS: UILabel!
+    var dollarQuotation: Double!
+    var IOF: Double!
     
     var dataSource: [Product] = []
     
@@ -21,6 +23,10 @@ class BuyViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        let dollar =  UserDefaults.standard.string(forKey: "dollarQuotation") ?? "3.2"
+        self.dollarQuotation = Double(dollar)
+        let iof =  UserDefaults.standard.string(forKey: "dollarQuotation") ?? "6.38"
+        IOF = Double(iof)
         loadProducts()
         sumProductsDolars()
         sumProductsReal()
@@ -48,12 +54,11 @@ class BuyViewController: UIViewController {
     func sumProductsReal() {
         var sumReal: Double = 0.0
         for product in dataSource {
-            if product.isCard { //OBS falta converter o dolar pra real
+            sumReal += (product.amount * dollarQuotation)
+            if product.isCard {
                 let IOF = product.state?.iof ?? 0
-                let sumIOF = (product.amount * IOF) / 100 //OBS: aplicar regra pra calcular IOF
-                sumReal += product.amount + sumIOF
-            } else {
-                sumReal += product.amount
+                let totalIOF = (sumReal * IOF) / 100
+                sumReal += totalIOF
             }
         }
         tfTotalRS.text = "\(sumReal)"

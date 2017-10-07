@@ -15,6 +15,7 @@
 		BA3D110F1F80575700B98A60 /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D110E1F80575700B98A60 /* ShopTableViewCell.swift */; };
 		BAA648231F82DE5300D1753F /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA648221F82DE5300D1753F /* ProductViewController.swift */; };
 		BAA648261F843BBB00D1753F /* EduardoWashington.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAA648241F843BBB00D1753F /* EduardoWashington.xcdatamodeld */; };
+		BADF1A931F888C5F003C13B3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BADF1A921F888C5F003C13B3 /* Settings.bundle */; };
 		BAE159DC1F8656CC00834517 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE159DB1F8656CC00834517 /* UIViewController+CoreData.swift */; };
 		BAE159DE1F87218800834517 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE159DD1F87218800834517 /* SettingsViewController.swift */; };
 		BAE159E01F8726D900834517 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE159DF1F8726D900834517 /* BuyViewController.swift */; };
@@ -32,6 +33,7 @@
 		BA3D110E1F80575700B98A60 /* ShopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTableViewCell.swift; sourceTree = "<group>"; };
 		BAA648221F82DE5300D1753F /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		BAA648251F843BBB00D1753F /* EduardoWashington.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EduardoWashington.xcdatamodel; sourceTree = "<group>"; };
+		BADF1A921F888C5F003C13B3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BAE159DB1F8656CC00834517 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
 		BAE159DD1F87218800834517 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BAE159DF1F8726D900834517 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				BA3D10FF1F8042B900B98A60 /* LaunchScreen.storyboard */,
 				BA3D11021F8042B900B98A60 /* Info.plist */,
 				BAA648241F843BBB00D1753F /* EduardoWashington.xcdatamodeld */,
+				BADF1A921F888C5F003C13B3 /* Settings.bundle */,
 			);
 			path = EduardoWashington;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BADF1A931F888C5F003C13B3 /* Settings.bundle in Resources */,
 				BA3D11011F8042B900B98A60 /* LaunchScreen.storyboard in Resources */,
 				BA3D10FE1F8042B900B98A60 /* Assets.xcassets in Resources */,
 				BA3D10FC1F8042B900B98A60 /* Main.storyboard in Resources */,

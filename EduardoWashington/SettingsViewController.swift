@@ -20,13 +20,25 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var tfIOF: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
+    var label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
+    
     var dataSource: [State] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.estimatedRowHeight = 106
+        tableView.rowHeight = UITableViewAutomaticDimension
+        label.text = "Lista de estados vazia"
+        label.textAlignment = .center
+        label.textColor = .black
         tableView.delegate = self
         tableView.dataSource = self
         loadStates()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tfDolarQuotation.text = UserDefaults.standard.string(forKey: "dollarQuotation") ?? "3.2"
+        tfIOF.text = UserDefaults.standard.string(forKey: "IOF") ?? "6.38"
     }
     
     func loadStates() {
@@ -105,6 +117,7 @@ extension SettingsViewController: UITableViewDelegate {
 extension SettingsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        tableView.backgroundView = (dataSource.count == 0) ? label : nil
         return dataSource.count
     }
     
