@@ -77,6 +77,7 @@
                                     <outlet property="tfAmount" destination="EGR-L5-Dly" id="1R9-Oi-xNL"/>
                                     <outlet property="tfProduct" destination="2ed-er-wxF" id="tZZ-jw-sfU"/>
                                     <outlet property="tfState" destination="4dW-dP-zKS" id="ieI-l6-djj"/>
+                                    <segue destination="LCy-q2-PoB" kind="show" id="I97-D1-zEI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -88,7 +89,7 @@
                     <navigationItem key="navigationItem" title="Lista de Compras" id="ym7-6j-GGr">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZT4-lh-3eh">
                             <connections>
-                                <segue destination="LCy-q2-PoB" kind="show" id="hDL-bU-6lV"/>
+                                <segue destination="LCy-q2-PoB" kind="show" id="LFa-a9-Zv9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -132,13 +133,14 @@
                                 </constraints>
                                 <connections>
                                     <action selector="addState:" destination="LCy-q2-PoB" eventType="touchUpInside" id="1c1-Nh-OW1"/>
+                                    <segue destination="0Iq-nk-sPW" kind="show" id="8Px-MC-wc0"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor (U$)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UFd-9P-03h">
                                 <rect key="frame" x="16" y="323" width="151" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="go"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8hk-gF-D1z">
                                 <rect key="frame" x="255" y="323" width="51" height="31"/>
@@ -413,4 +415,8 @@
     <resources>
         <image name="gift" width="256" height="256"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8Px-MC-wc0"/>
+        <segue reference="I97-D1-zEI"/>
+    </inferredMetricsTieBreakers>
 </document>

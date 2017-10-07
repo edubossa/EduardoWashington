@@ -129,4 +129,3 @@ extension SettingsViewController: UITableViewDataSource {
         return cell
     }
 }
-

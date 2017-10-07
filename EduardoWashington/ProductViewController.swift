@@ -20,6 +20,7 @@ class ProductViewController: UIViewController {
     var product: Product!
     var state: State!
     var smallImage: UIImage!
+    var isNewImageSelected: Bool = true
     
     //PickerView que será usado como entrada para cadastro dos estados
     var pickerView: UIPickerView!
@@ -31,11 +32,12 @@ class ProductViewController: UIViewController {
         super.viewDidLoad()
         if product != nil {
             tfName.text = product.name
-            tfState.text = product.state?.description //REVIEW
+            tfState.text = product.state?.name
             tfAmount.text = "\(product.amount)"
             swIsCard.setOn(product.isCard, animated: false)
             if let image = product.image as? UIImage {
                 ivImage.image = image
+                isNewImageSelected = false
             }
         }
         
@@ -46,6 +48,7 @@ class ProductViewController: UIViewController {
         pickerView.backgroundColor = .white
         pickerView.delegate = self
         pickerView.dataSource = self
+        tfState.delegate = self
         
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 44))
         let btCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
@@ -128,6 +131,15 @@ class ProductViewController: UIViewController {
         if product == nil {
             product = Product(context: context)
         }
+        
+        if tfState.text!.isEmpty || tfState.text!.isEmpty || tfAmount.text!.isEmpty || isNewImageSelected {
+            let alert = UIAlertController(title: "Alerta", message: "Todos os campos são obrigatórios.", preferredStyle: UIAlertControllerStyle.alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
         product.name = tfName.text!
         product.state = state
         product.amount = Double(tfAmount.text!)!
@@ -179,8 +191,16 @@ extension ProductViewController: UIImagePickerControllerDelegate, UINavigationCo
         smallImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         ivImage.image = smallImage
+        isNewImageSelected = false
         dismiss(animated: true, completion: nil)
     }
 }
 
-
+//Bloqueia pro usuario nao digitar com o teclado
+extension ProductViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return false
+    }
+    
+}
