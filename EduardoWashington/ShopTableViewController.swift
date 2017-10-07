@@ -41,7 +41,7 @@ class ShopTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ProductViewController {
-            //vc.product = fetchedResultController.object(at: tableView.indexPathForSelectedRow!)
+            vc.product = fetchedResultController.object(at: tableView.indexPathForSelectedRow!)
         }
     }
     
@@ -60,6 +60,11 @@ class ShopTableViewController: UITableViewController {
             return 0
         }
     }
+    
+    /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let product =  fetchedResultController.object(at: tableView.indexPathForSelectedRow!)
+        print(product.name!)
+    }*/
     
     //Método que define a célula que será apresentada em cada linha
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
