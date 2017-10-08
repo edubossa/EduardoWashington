@@ -132,7 +132,6 @@
                                     <constraint firstAttribute="width" constant="22" id="jfb-OS-YFj"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="addState:" destination="LCy-q2-PoB" eventType="touchUpInside" id="1c1-Nh-OW1"/>
                                     <segue destination="0Iq-nk-sPW" kind="show" id="8Px-MC-wc0"/>
                                 </connections>
                             </button>
@@ -313,7 +312,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="3HC-6m-7fo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ajustes" id="cNA-tJ-wm7"/>
+                    <tabBarItem key="tabBarItem" title="Ajustes" image="ic_settings" id="cNA-tJ-wm7"/>
                     <connections>
                         <outlet property="tableView" destination="aoQ-Ap-gGs" id="MG4-YA-0Tc"/>
                         <outlet property="tfDolarQuotation" destination="NrI-j0-2Ff" id="k6s-Vy-a8C"/>
@@ -364,7 +363,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="KgL-eR-deX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Total da Compra" id="Jq2-69-AF6"/>
+                    <tabBarItem key="tabBarItem" title="Total da Compra" image="ic_account_balance_wallet" id="Jq2-69-AF6"/>
                     <connections>
                         <outlet property="tfTotalRS" destination="koL-RV-8KD" id="ig0-xQ-JAv"/>
                         <outlet property="tfTotalUS" destination="iBI-uh-ygw" id="XpG-mF-qmX"/>
@@ -397,7 +396,7 @@
         <scene sceneID="mNX-mV-sg4">
             <objects>
                 <navigationController id="Orw-qE-hJE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Compras" id="LoT-Sn-WOK"/>
+                    <tabBarItem key="tabBarItem" title="Compras" image="ic_shopping_cart" id="LoT-Sn-WOK"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nrd-TX-ajj">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -414,6 +413,9 @@
     </scenes>
     <resources>
         <image name="gift" width="256" height="256"/>
+        <image name="ic_account_balance_wallet" width="24" height="24"/>
+        <image name="ic_settings" width="24" height="24"/>
+        <image name="ic_shopping_cart" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8Px-MC-wc0"/>

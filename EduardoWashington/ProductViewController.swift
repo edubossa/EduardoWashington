@@ -33,6 +33,7 @@ class ProductViewController: UIViewController {
         if product != nil {
             tfName.text = product.name
             tfState.text = product.state?.name
+            state = product.state
             tfAmount.text = "\(product.amount)"
             swIsCard.setOn(product.isCard, animated: false)
             if let image = product.image as? UIImage {
@@ -115,29 +116,17 @@ class ProductViewController: UIViewController {
     }
     
     
-    @IBAction func addState(_ sender: UIButton) {
-        /*let state = State(context: context)
-        state.name = "California"
-        state.iof = 5.58
-        do {
-            try context.save()
-        } catch {
-            print(error.localizedDescription)
-        }*/
-        
-    }
-    
     @IBAction func register(_ sender: UIButton) {
-        if product == nil {
-            product = Product(context: context)
-        }
-        
         if tfState.text!.isEmpty || tfState.text!.isEmpty || tfAmount.text!.isEmpty || isNewImageSelected {
             let alert = UIAlertController(title: "Alerta", message: "Todos os campos são obrigatórios.", preferredStyle: UIAlertControllerStyle.alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(okAction)
             present(alert, animated: true, completion: nil)
             return
+        }
+        
+        if product == nil {
+            product = Product(context: context)
         }
         
         product.name = tfName.text!
@@ -157,11 +146,8 @@ class ProductViewController: UIViewController {
             context.delete(product)
         }
         
-        //dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
     }
-    
-    
     
     
 } //fim classe

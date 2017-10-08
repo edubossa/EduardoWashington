@@ -69,7 +69,7 @@ class ShopTableViewController: UITableViewController {
         let product = fetchedResultController.object(at: indexPath)
         cell.tfProduct.text = product.name
         cell.tfState.text = product.state?.name
-        cell.tfAmount.text = "\(product.amount)"
+        cell.tfAmount.text = FormatterUtils.format(value: product.amount, localeType: .BR)
         if let image = product.image as? UIImage {
             cell.ivImage.image = image
         } else {

@@ -125,7 +125,7 @@ extension SettingsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath) as! SettingsTableViewCell
         let state = dataSource[indexPath.row]
         cell.tfState.text = state.name
-        cell.tfIOF.text = "\(state.iof)"
+        cell.tfIOF.text = FormatterUtils.format(value: state.iof, localeType: .US)
         return cell
     }
 }

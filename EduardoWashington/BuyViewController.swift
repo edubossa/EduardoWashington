@@ -48,7 +48,7 @@ class BuyViewController: UIViewController {
         for product in dataSource {
              sumDolar += product.amount;
         }
-        tfTotalUS.text = "\(sumDolar)"
+        tfTotalUS.text = FormatterUtils.format(value: sumDolar, localeType: .US)
     }
     
     func sumProductsReal() {
@@ -61,7 +61,7 @@ class BuyViewController: UIViewController {
                 sumReal += totalIOF
             }
         }
-        tfTotalRS.text = "\(sumReal)"
+        tfTotalRS.text = FormatterUtils.format(value: sumReal, localeType: .BR)
     }
 
 }
