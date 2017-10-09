@@ -20,6 +20,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var tfIOF: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
+    var isFieldStateRequired: Bool = false
+    var isFieldIOFRequired: Bool = false
+    
     var label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
     
     var dataSource: [State] = []
@@ -52,23 +55,37 @@ class SettingsViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
-
+    
     func showAlert(type: StateType, state: State?) {
         let title = (type == .add) ? "Adicionar" : "Editar"
         let alert = UIAlertController(title: "\(title) Estado", message: nil, preferredStyle: .alert)
         alert.addTextField { (textField: UITextField) in
             textField.placeholder = "Nome do estado"
+            if self.isFieldStateRequired {
+                self.createFieldRequired(field: alert.textFields![0])
+            }
             if let name = state?.name {
                 textField.text = name
             }
         }
         alert.addTextField { (textField: UITextField) in
             textField.placeholder = "Imposto"
+            textField.keyboardType = .decimalPad
+            if self.isFieldIOFRequired {
+                self.createFieldRequired(field: alert.textFields![1])
+            }
             if let iof = state?.iof {
                 textField.text = "\(iof)"
             }
         }
         alert.addAction(UIAlertAction(title: title, style: .default, handler: { (action: UIAlertAction) in
+            if alert.textFields![0].text!.isEmpty {self.isFieldStateRequired = true} else {self.isFieldStateRequired = false}
+            if alert.textFields![1].text!.isEmpty {self.isFieldIOFRequired = true} else {self.isFieldIOFRequired = false}
+            if alert.textFields![0].text!.isEmpty || alert.textFields![1].text!.isEmpty {
+                self.showAlert(type: type, state: state)
+                return
+            }
+            
             let state = state ?? State(context: self.context)
             state.name = alert.textFields?.first?.text
             state.iof = Double(alert.textFields?.last?.text ?? "") ?? 0.0
@@ -80,8 +97,17 @@ class SettingsViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }))
-        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: { (UIAlertAction) in
+           self.isFieldStateRequired = false
+            self.isFieldIOFRequired = false
+        }))
         present(alert, animated: true, completion: nil)
+    }
+    
+    func createFieldRequired(field: UITextField) {
+        field.placeholder = "Campo obrigatório"
+        field.layer.borderColor = UIColor( red: 1.0, green: 0.0, blue:0, alpha: 1.0 ).cgColor
+        field.layer.borderWidth = 1.0
     }
     
     @IBAction func addState(_ sender: UIButton) {
