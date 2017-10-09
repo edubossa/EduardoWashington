@@ -40,10 +40,9 @@ class ShopTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? ProductViewController {
-            if let index = tableView.indexPathForSelectedRow {
-                vc.product = fetchedResultController.object(at: index)
-            }
+        if segue.identifier! == "edit" {
+            let vc = segue.destination as! ProductViewController
+            vc.product = fetchedResultController.object(at: tableView.indexPathForSelectedRow!)
         }
     }
     

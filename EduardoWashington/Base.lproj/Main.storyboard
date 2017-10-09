@@ -77,7 +77,7 @@
                                     <outlet property="tfAmount" destination="EGR-L5-Dly" id="1R9-Oi-xNL"/>
                                     <outlet property="tfProduct" destination="2ed-er-wxF" id="tZZ-jw-sfU"/>
                                     <outlet property="tfState" destination="4dW-dP-zKS" id="ieI-l6-djj"/>
-                                    <segue destination="LCy-q2-PoB" kind="show" id="I97-D1-zEI"/>
+                                    <segue destination="LCy-q2-PoB" kind="show" identifier="edit" id="I97-D1-zEI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -89,7 +89,7 @@
                     <navigationItem key="navigationItem" title="Lista de Compras" id="ym7-6j-GGr">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZT4-lh-3eh">
                             <connections>
-                                <segue destination="LCy-q2-PoB" kind="show" id="LFa-a9-Zv9"/>
+                                <segue destination="LCy-q2-PoB" kind="show" identifier="add" id="LFa-a9-Zv9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
