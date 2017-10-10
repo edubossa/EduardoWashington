@@ -36,12 +36,12 @@ class SettingsViewController: UIViewController {
         label.textColor = .black
         tableView.delegate = self
         tableView.dataSource = self
-        loadStates()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         tfDolarQuotation.text = UserDefaults.standard.string(forKey: "dollarQuotation") ?? "3.2"
         tfIOF.text = UserDefaults.standard.string(forKey: "IOF") ?? "6.38"
+        loadStates()
     }
     
     func loadStates() {

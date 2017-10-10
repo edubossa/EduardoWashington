@@ -42,8 +42,6 @@ class ProductViewController: UIViewController {
             }
         }
         
-        loadStates()
-        
         //Configuracoes pickerView
         pickerView = UIPickerView()
         pickerView.backgroundColor = .white
@@ -60,13 +58,19 @@ class ProductViewController: UIViewController {
         tfState.inputAccessoryView = toolbar
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        loadStates()
+    }
+    
     func cancel() {
         tfState.resignFirstResponder()
     }
     
     func done() {
-        state = dataSource[pickerView.selectedRow(inComponent: 0)]
-        tfState.text = state.name
+        if dataSource.count > 0 {
+            state = dataSource[pickerView.selectedRow(inComponent: 0)]
+            tfState.text = state.name
+        }
         cancel()
     }
     
